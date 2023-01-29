@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import axios, * as others from "axios";
 import Coin from "./Coin";
+import Navbar from "./component/Navbar";
 function App() {
   const [listOfCoins, setListOfCoins] = useState([]);
   const [search, setSearch] = useState("");
@@ -17,19 +18,23 @@ function App() {
     return coin.name.toLowerCase().includes(search.toLowerCase());
   });
   return (
-    <div className="App">
-      <div className="cryptoHeader">
-        <input
-          placeHolder="Bitcoin"
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </div>
-      <div className="cryptoDisplay">
-        {filteredCoins.map((coin) => (
-          <Coin key={coin.id} coin={coin} />
-        ))}
-      </div>
+    <div>
+      <Navbar />
     </div>
+
+    // <div class="bg-grey">
+    //   <div className="cryptoHeader">
+    //     <input
+    //       placeHolder="Bitcoin"
+    //       onChange={(e) => setSearch(e.target.value)}
+    //     />
+    //   </div>
+    //   <div className="cryptoDisplay">
+    //     {filteredCoins.map((coin) => (
+    //       <Coin key={coin.id} coin={coin} />
+    //     ))}
+    //   </div>
+    // </div>
   );
 }
 
