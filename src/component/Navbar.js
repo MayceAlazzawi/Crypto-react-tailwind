@@ -14,14 +14,14 @@ const Navbar = () => {
     //Navbar section dksfjskdl
     <section id="navbar" className="text-black">
       {/* <!-- component --> */}
-      <nav class="relative select-none bg-transparent lg:flex lg:items-stretch w-full px-8 py-5 dark:bg-black dark:text-white ">
+      <nav class="relative select-none  bg-[#9ecbe0] lg:flex lg:items-stretch w-full px-8 pt-2 pb-2  dark:text-white  dark:bg-gray-900">
         <div
           class="flex flex-no-shrink items-stretch h-12 "
           onClick={closeMenu}
         >
           <a
             href="/"
-            class="flex-no-grow font-bold text-whblack ite text-2xl flex-no-shrink relative py-2 px-4 leading-normal  no-underline flex items-center hover:bg-grey-dark "
+            class="flex-no-grow font-bold text-black ite text-2xl flex-no-shrink relative py-2 px-4 leading-normal  no-underline flex items-center hover:bg-grey-dark dark:text-white"
           >
             MYS.Crypto
           </a>
@@ -57,37 +57,31 @@ const Navbar = () => {
             <div class="lg:flex lg:items-stretch lg:justify-end ml-auto">
               <a
                 href="#coins"
-                class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center hover:bg-grey-dark hover:bg-gray-900 hover:text-white"
+                class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
               >
                 Coins Prices
               </a>
               <a
                 href="#exchange"
-                class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center hover:bg-grey-dark hover:bg-gray-900 hover:text-white"
+                class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
               >
                 Exchange
               </a>
               <a
                 href="#news"
-                class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center hover:bg-grey-dark hover:bg-gray-900 hover:text-white"
+                class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
               >
                 News
               </a>
-              <a
-                className=" flex-no-grow
-                flex-no-shrink
-                relative
-                py-2
-                px-4
-                leading-normal
-                text-gray-600
-                no-underline
-                flex
-                items-center
-                hover:bg-grey-dark"
-              >
-                <Switcher />
-              </a>
+              <div className="flex items-center ">
+                <a
+                  className=" 
+                  pt-6 px-4
+              "
+                >
+                  <Switcher />
+                </a>
+              </div>
             </div>
           </div>
         )}

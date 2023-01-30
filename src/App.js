@@ -1,8 +1,10 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import axios, * as others from "axios";
-import Coin from "./Coin";
+import Coin from "./component/Coin";
 import Navbar from "./component/Navbar";
+import Hero from "./component/Hero";
+import CoinsContianer from "./component/CoinsContianer";
 function App() {
   const [listOfCoins, setListOfCoins] = useState([]);
   const [search, setSearch] = useState("");
@@ -18,8 +20,10 @@ function App() {
     return coin.name.toLowerCase().includes(search.toLowerCase());
   });
   return (
-    <div>
+    <div className="h-screen w-full ">
       <Navbar />
+      <Hero />
+      {/* <CoinsContianer /> */}
     </div>
 
     // <div class="bg-grey">
