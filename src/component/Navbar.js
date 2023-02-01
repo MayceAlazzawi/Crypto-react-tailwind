@@ -14,7 +14,7 @@ const Navbar = () => {
     //Navbar section dksfjskdl
     <section id="navbar" className="text-black">
       {/* <!-- component --> */}
-      <nav class="relative select-none  bg-[#9ecbe0] lg:flex lg:items-stretch w-full px-8 pt-2 pb-2  dark:text-white  dark:bg-gray-900">
+      <nav class=" select-none  bg-[#9ecbe0] lg:flex lg:items-stretch w-full  pt-2 pb-2  dark:text-white  dark:bg-gray-900 relative">
         <div
           class="flex flex-no-shrink items-stretch h-12 "
           onClick={closeMenu}
@@ -51,25 +51,25 @@ const Navbar = () => {
         </div>
         {isOpen && (
           <div
-            class="  w-full lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow"
+            class="bg-[#9dcbe0] shadow-lg border lg:hidden w-full lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow z-100 absolute "
             ref={ref}
           >
-            <div class="lg:flex lg:items-stretch lg:justify-end ml-auto">
+            <div class="lg:flex  lg:items-stretch lg:justify-end ml-auto">
               <a
                 href="#coins"
-                class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
+                class="flex-no-grow rounded border-b flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
               >
                 Coins Prices
               </a>
               <a
                 href="#exchange"
-                class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
+                class="flex-no-grow border-b rounded flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
               >
                 Exchange
               </a>
               <a
                 href="#news"
-                class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
+                class="flex-no-grow border-b rounded flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
               >
                 News
               </a>
