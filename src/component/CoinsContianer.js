@@ -21,7 +21,10 @@ const CoinsContianer = ({ listOfCoins }) => {
     return coin.name.toLowerCase().includes(search.toLowerCase());
   });
   return (
-    <div className="rounded-xl bg-white mx-8 mt-[-8px] mb-20 shadow-2xl dark:bg-gray-700 dark:border">
+    <div
+      id="coins"
+      className="h-4/6 mb-2 rounded-xl bg-white mx-8 mt-[-8px] mb-20 shadow-2xl dark:bg-gray-700 dark:border"
+    >
       <div className="flex justify-center py-2 items-center border-b">
         <label>Search:</label>
         <input
@@ -31,6 +34,13 @@ const CoinsContianer = ({ listOfCoins }) => {
         ></input>
       </div>
       <div className="flex flex-col">
+        <div className="flex flex-row justify-between py-2 px-4">
+          <div className="flex items-center text-center justify-center">
+            <span>Name</span>
+          </div>
+          <div className=" flex items-center">Price</div>
+          <div className="flex items-center">Symbol</div>
+        </div>
         {filteredCoins.map((coin) => (
           <Coin key={coin.id} coin={coin} />
         ))}

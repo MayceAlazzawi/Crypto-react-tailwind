@@ -3,7 +3,7 @@ import Switcher from "../component/Switcher";
 import onClickOutside from "react-onclickoutside";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const ref = useRef();
   const closeMenu = () => {
     isOpen ? setIsOpen(false) : setIsOpen(true);
@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
         {isOpen && (
           <div
-            class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow"
+            class="  w-full lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow"
             ref={ref}
           >
             <div class="lg:flex lg:items-stretch lg:justify-end ml-auto">
@@ -85,6 +85,40 @@ const Navbar = () => {
             </div>
           </div>
         )}
+        <div
+          class="hidden md:blok lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow"
+          ref={ref}
+        >
+          <div class="lg:flex lg:items-stretch lg:justify-end ml-auto">
+            <a
+              href="#coins"
+              class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
+            >
+              Coins Prices
+            </a>
+            <a
+              href="#exchange"
+              class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
+            >
+              Exchange
+            </a>
+            <a
+              href="#news"
+              class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
+            >
+              News
+            </a>
+            <div className="flex items-center ">
+              <a
+                className=" 
+                  pt-6 px-4
+              "
+              >
+                <Switcher />
+              </a>
+            </div>
+          </div>
+        </div>
       </nav>
     </section>
   );

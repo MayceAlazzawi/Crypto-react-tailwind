@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://api.coinstats.app/public/v1/coins?skip=0&limit=10")
+      .get("https://api.coinstats.app/public/v1/coins?skip=0&limit=6")
       .then((res) => {
         setListOfCoins(res.data.coins);
       });
@@ -21,6 +21,7 @@ function App() {
       <Navbar />
       <Hero />
       <CoinsContianer listOfCoins={listOfCoins} />
+      <div className="m-2 text-center"> To be continued...</div>
     </div>
   );
 }

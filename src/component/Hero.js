@@ -5,9 +5,9 @@ const Hero = () => {
     //  <!-- Hero section -->
     <section
       id="hero"
-      className="h-4/6 pb-[50px] bg-[#9ecbe0] flex justify-center items-center px-10 dark:bg-black"
+      className=" h-4/6 pb-[50px] bg-[#9ecbe0] flex justify-center items-center px-10 dark:bg-black"
     >
-      <div className="w-full flex justify-between items-center flex-col md:flex-row">
+      <div className="  w-full flex justify-between items-center flex-col md:flex-row">
         <div className="text-[2rem] flexx justify-center text-center md:justify-start md:text-[3rem]  font-[700]  dark:text-white ">
           <h1>The World's </h1>
           <h1> Fastest Growing</h1>
