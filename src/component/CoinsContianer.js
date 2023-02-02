@@ -1,9 +1,15 @@
 import React from "react";
 import Coin from "./Coin";
 import { useEffect, useState } from "react";
+import Pagination from "./Pagination";
 
-const CoinsContianer = ({ listOfCoins }) => {
+const CoinsContianer = ({ listOfCoins, loading }) => {
   const [search, setSearch] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+  if (loading) {
+    return <h2>Loading...</h2>;
+  }
   // <div class="bg-grey">
   //   <div className="cryptoHeader">
   //     <input
@@ -17,7 +23,17 @@ const CoinsContianer = ({ listOfCoins }) => {
   //     ))}
   //   </div>
   // </div>
-  const filteredCoins = listOfCoins.filter((coin) => {
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = listOfCoins.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginateFront = () => setCurrentPage(currentPage + 1);
+  const paginateBack = () => setCurrentPage(currentPage - 1);
+
+  const filteredCoins = currentPosts.filter((coin) => {
     return coin.name.toLowerCase().includes(search.toLowerCase());
   });
   return (
@@ -33,7 +49,7 @@ const CoinsContianer = ({ listOfCoins }) => {
           onChange={(e) => setSearch(e.target.value)}
         ></input>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col mb-8 h-5/6">
         <div className="flex flex-row justify-between py-2 px-4">
           <div className="flex items-center text-center justify-center">
             <span>Name</span>
@@ -45,6 +61,13 @@ const CoinsContianer = ({ listOfCoins }) => {
           <Coin key={coin.id} coin={coin} />
         ))}
       </div>
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={listOfCoins.length}
+        paginateBack={paginateBack}
+        paginateFront={paginateFront}
+        currentPage={currentPage}
+      />
     </div>
   );
 };
