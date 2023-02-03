@@ -18,10 +18,7 @@ export default function Pagination({
             {currentPage * postsPerPage - 6}
           </span>
           to
-          <span className="font-medium p-1">
-            {" "}
-            {currentPage * postsPerPage}{" "}
-          </span>
+          <span className="font-medium p-1">{currentPage * postsPerPage}</span>
           of
           <span className="font-medium p-1"> {totalPosts} </span>
           results
@@ -38,8 +35,8 @@ export default function Pagination({
                 href="#"
                 className={
                   currentPage === number
-                    ? "bg-blue border-red-300 text-red-500 hover:bg-blue-200 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                    : "bg-white border-gray-300 text-gray-500 hover:bg-blue-200 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                    ? "bg-blue border-[#f4a230] text-[#f4a230] hover:bg-blue-200 relative inline-flex items-center px-4 py-2 border md:text-sm text-xs font-medium"
+                    : "bg-white border-gray-300 text-gray-500 hover:bg-blue-200 relative inline-flex items-center px-4 py-2 border md:text-sm text-xs font-medium"
                 }
               >
                 {number}

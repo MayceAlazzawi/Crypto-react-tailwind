@@ -21,18 +21,18 @@ const Navbar = () => {
         >
           <a
             href="/"
-            class="flex-no-grow font-bold text-black ite text-2xl flex-no-shrink relative py-2 px-4 leading-normal  no-underline flex items-center hover:bg-grey-dark dark:text-white"
+            class="font-extrabold text-[#004465] flex-no-grow font-bold m-6 text-2xl flex-no-shrink relative py-2 px-4 leading-normal  no-underline flex items-center hover:bg-grey-dark dark:text-white"
           >
             MYS.Crypto
           </a>
 
           <button
-            class="block lg:hidden cursor-pointer dark:bg-white  ml-auto relative w-12 h-12 p-4 dark:bg-black"
+            class="block lg:hidden cursor-pointer dark:bg-white  ml-auto relative w-12 h-12 p-4 mr-6 dark:bg-black"
             onClick={() => setIsOpen(true)}
           >
             {isOpen ? (
               <svg
-                className="fill-current text-black dark:text-white"
+                className="fill-current text-[#004465] dark:text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -40,7 +40,7 @@ const Navbar = () => {
               </svg>
             ) : (
               <svg
-                class="fill-current text-black dark:text-white"
+                class="fill-current text-[#004465] dark:text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -51,32 +51,31 @@ const Navbar = () => {
         </div>
         {isOpen && (
           <div
-            class="bg-[#9dcbe0] shadow-lg border lg:hidden w-full lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow z-100 absolute "
+            class="bg-[#9dcbe0]  shadow-lg border lg:hidden w-full lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow z-100 absolute "
             ref={ref}
           >
             <div class="lg:flex  lg:items-stretch lg:justify-end ml-auto">
               <a
                 href="#coins"
-                class="flex-no-grow rounded border-b flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
+                class="flex-no-grow rounded border-b flex-no-shrink relative py-3 px-8 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
               >
                 Coins Prices
               </a>
               <a
                 href="#exchange"
-                class="flex-no-grow border-b rounded flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
+                class="flex-no-grow border-b rounded flex-no-shrink relative py-3 px-8 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
               >
                 Exchange
               </a>
               <a
                 href="#news"
-                class="flex-no-grow border-b rounded flex-no-shrink relative py-2 px-4 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
+                class="flex-no-grow border-b rounded flex-no-shrink relative py-3 px-8 leading-normal text-gray-600 no-underline flex items-center md:hover:bg-transparent dark:hover:bg-grey-dark  hover:text-white dark:text-gray-300"
               >
                 News
               </a>
-              <div className="flex items-center ">
+              <div className="flex items-center pt-7 pb-0 px-8">
                 <a
                   className=" 
-                  pt-6 px-4
               "
                 >
                   <Switcher />
@@ -86,7 +85,7 @@ const Navbar = () => {
           </div>
         )}
         <div
-          class="hidden md:blok lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow"
+          class="hidden mr-6 md:blok lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow"
           ref={ref}
         >
           <div class="lg:flex lg:items-stretch lg:justify-end ml-auto">
@@ -111,7 +110,7 @@ const Navbar = () => {
             <div className="flex items-center ">
               <a
                 className=" 
-                  pt-6 px-4
+                  pt-6 px-6
               "
               >
                 <Switcher />

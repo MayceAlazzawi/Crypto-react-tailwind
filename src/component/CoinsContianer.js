@@ -53,12 +53,12 @@ const CoinsContianer = ({ listOfCoins, loading }) => {
         ></input>
       </div>
       <div className="flex flex-col mb-8 h-5/6">
-        <div className="flex flex-row justify-between py-2 px-4">
-          <div className="flex items-center text-center justify-center">
+        <div className="flex flex-row  py-2 px-4">
+          <div className="flex items-center text-center  w-1/3">
             <span>Name</span>
           </div>
-          <div className=" flex items-center">Price</div>
-          <div className="flex items-center">Symbol</div>
+          <div className=" flex items-center justify-center w-1/3">Price</div>
+          <div className="flex items-center justify-center w-1/3">Symbol</div>
         </div>
         {filteredCoins.map((coin) => (
           <Coin key={coin.id} coin={coin} />
