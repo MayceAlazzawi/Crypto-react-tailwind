@@ -14,7 +14,7 @@ function App() {
     setLoading(true);
     const fetchCoins = async () => {
       axios
-        .get("https://api.coinstats.app/public/v1/coins?skip=0&limit=20")
+        .get("https://api.coinstats.app/public/v1/coins?skip=0&limit=24")
         .then((res) => {
           setListOfCoins(res.data.coins);
           setLoading(false);

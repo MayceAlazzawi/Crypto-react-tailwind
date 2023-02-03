@@ -36,6 +36,9 @@ const CoinsContianer = ({ listOfCoins, loading }) => {
   const filteredCoins = currentPosts.filter((coin) => {
     return coin.name.toLowerCase().includes(search.toLowerCase());
   });
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div
       id="coins"
@@ -64,8 +67,7 @@ const CoinsContianer = ({ listOfCoins, loading }) => {
       <Pagination
         postsPerPage={postsPerPage}
         totalPosts={listOfCoins.length}
-        paginateBack={paginateBack}
-        paginateFront={paginateFront}
+        paginate={paginate}
         currentPage={currentPage}
       />
     </div>
