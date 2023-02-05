@@ -18,6 +18,7 @@ function App() {
         .then((res) => {
           setListOfCoins(res.data.coins);
           setLoading(false);
+          console.log(res.data);
         });
     };
     fetchCoins();

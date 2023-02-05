@@ -4,7 +4,7 @@ const Coin = (coin) => {
   return (
     <div className=" w-full">
       {/* <div className="flex flex-wrap items-center justify-center crd rounded-xl bg-white  dark:"> */}
-      <div className="border p-2 m-2  rounded-xl flex bg-white dark:bg-gray-800 dark:text-white">
+      <div className="shadow p-2 m-2  rounded-xl flex bg-white dark:bg-gray-800 dark:text-white">
         <div className="flex items-center w-1/3 ">
           <img src={coin.coin.icon} className="w-[30px] h-[30px] mr-2 " />
           {coin.coin.name}
