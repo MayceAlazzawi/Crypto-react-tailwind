@@ -21,7 +21,7 @@ const Navbar = () => {
         >
           <a
             href="/"
-            class="font-extrabold text-[#004465] flex-no-grow font-bold m-6 text-2xl flex-no-shrink relative py-2 px-4 leading-normal  no-underline flex items-center hover:bg-grey-dark dark:text-white"
+            class="font-extrabold text-[#004465] flex-no-grow font-bold m-4 text-2xl flex-no-shrink relative py-2 px-4 leading-normal  no-underline flex items-center hover:bg-grey-dark dark:text-white"
           >
             MYS.Crypto
           </a>
